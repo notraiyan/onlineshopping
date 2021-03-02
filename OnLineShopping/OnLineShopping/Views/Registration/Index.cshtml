@@ -1,0 +1,199 @@
+﻿
+@{
+    ViewBag.Title = "    New Customer Registration ";
+    Layout = "~/Views/Shared/_PrivateLayout.cshtml";
+}
+@*<script src="~/Scripts/jquery-3.3.1.js"></script>
+<link href="~/AdminLTE/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+<script src="~/AdminLTE/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>*@
+<div class="box" style="border:double">
+    <div class="row col-sm-4 col-sm-offset-1">
+        <br />
+        <br />
+        <br />
+        <input id="huserId" type="hidden" value="" />
+        <div class="form-group">
+            <label> User Name <span style="color:red;">*</span></label>
+            <input type="text" id="textusername" name="textusername" maxlength="50" class="form-control">
+            <label id="lbluserName" style="color:red;font-size:11px;font-style:italic; "> </label>
+        </div>
+        <div class="form-group">
+            <label> Password <span style="color:red;">*</span></label>
+            <input type="text" id="textpassword" name="textpassword" maxlength="50" class="form-control">
+            <label id="lblpassword" style="color:red;font-size:11px;font-style:italic; "> </label>
+        </div>
+        <div class="form-group">
+            <label> Date <span style="color:red;">*</span></label>
+            <input type="text" id="textdate" name="textdate" maxlength="50" class="form-control CustomDatepicker">
+            <label id="lbldate" style="color:red;font-size:11px;font-style:italic; "> </label>
+        </div>
+
+        <div class="form-group">
+            <input type="button" class="register" name="register" id="register" value="Register" />
+            <input type="button" class="clear" name="clear" id="clear" value="Clear" />
+        </div>
+    </div>
+    <div class="container">
+        <table class="table table-striped table-bordered table-hover" id="UserTable">
+            <thead>
+                <tr>
+                    <th style="display:none">Id </th>
+                    <th>User Name</th>
+                    <th>Password</th>
+                    <th>User Creation Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        Clear();
+        GetAllUser();
+   });
+    $("#register").click(function () {
+        var validation = false;
+        if ($.trim($("#textusername").val()) == "") {
+
+            $('#lbluserName').html("User name required!")
+            validation = false;
+        }
+        else {
+            $('#lbluserName').html("")
+            validation = true;
+        }
+
+        if ($.trim($("#textpassword").val()) == "") {
+            $('#lblpassword').html("Password required!")
+            validation = false;
+        }
+        else {
+            $('#lblpassword').html("")
+            validation = true;
+        }
+
+        if ($.trim($("#textdate").val()) == "") {
+            $('#lbldate').html("Date required!")
+            validation = false;
+        }
+        else {
+            $('#lbldate').html("")
+            validation = true;
+        }
+        if (validation==true) {
+            InsertOrUpdate();
+        }
+
+
+    });
+    $("#clear").click(function () {
+        Clear();
+    });
+    function Clear() {
+        $("#textusername").val("");
+        $("#textpassword").val("");
+        $("#textdate").val("");
+        $('#huserId').val("");
+        registration = null;
+    };
+    function InsertOrUpdate() {
+        var registration;
+        registration = new Object();
+        registration.UserId = $('#huserId').val();
+        registration.UserName = $('#textusername').val();
+        registration.Password = $('#textpassword').val();
+        var date = ConvertDateFormat($('#textdate').val());
+        registration.UserCreationDate = date;
+        $.post('/API/RegistrationApi/InsertORUpdateRegistrationInfo', registration).done(function (data) {
+            Clear();
+            GetAllUser();
+            $('#register').val("Register");
+            });
+    }
+    function GetAllUser() {
+        $.ajax({
+            url: '/API/TransactionApi/GetAllUser',
+            dataType: "json",
+            method: 'GET',
+            success: function (data) {
+                var UserTable = $('#UserTable tbody');
+                UserTable.empty();
+                $(data).each(function (index, user) {
+                    UserTable.append('<tr>'
+                        + '<td style="display:none" class="UserId">' + user.UserId + '</td>'
+                        + '<td class="UserName">' + user.UserName + '</td>'
+                        + '<td class="Password">' + user.Password + '</td>'
+                        + '<td class="Date">' + ConvertStringFormatToDate( user.UserCreationDate) + '</td>'
+                        + '<td><input type="button" id="BTNEdit" value="Edit" /></td>'
+                        + '<td><input type="button" id="BTNDelete" value="Delete" /></td>'
+                        + '</tr>');
+                });
+            },
+            error: function (err) {
+                alert(err.responseText);
+            }
+        });
+    }
+    $("#UserTable tbody").on('click', '#BTNEdit', function () {
+
+        $('#huserId').val($(this).closest("tr").find(".UserId").text())
+        var UserName = $(this).closest("tr").find(".UserName").text();
+        var Password = $(this).closest("tr").find(".Password").text();
+        var Date = $(this).closest("tr").find(".Date").text();
+        $('#textusername').val(UserName);
+        $('#textpassword').val(Password);
+        $('#textdate').val(Date);
+        $('#register').val("Update");
+    });
+    $("#UserTable tbody").on('click', '#BTNDelete', function () {
+        if (confirm("Are you sure?")) {
+            var id = $(this).closest("tr").find(".UserId").text();
+            $.ajax({
+                url: '/API/RegistrationApi/DeleteUser/' + id,
+                dataType: "json",
+                method: 'delete',
+                success: function (data) {
+                    GetAllUser();
+                },
+                error: function (err) {
+                    alert(err.responseText);
+                }
+            });
+        }
+    });
+
+    // dd/mm/yyyy to  mm/dd/yyyy for save
+    function ConvertDateFormat(inputdate) {
+        // alert(inputdate);
+        if (isNaN(inputdate)) {
+            var array = inputdate.split("/");
+            var date = array[1] + "/" + array[0] + "/" + array[2];
+            // alert(date);
+            return date;  // dd/mm/yyyy to  mm/dd/yyyy
+        }
+        else return null;
+    }
+
+    // yyyy-mm-dd to  dd/mm/yyyy for display
+    function ConvertStringFormatToDate(inputdate) {
+        if (isNaN(inputdate)) {
+            var customDate = new Date(inputdate);
+            var date = customDate.getDate() + "/" + (customDate.getMonth() + 1) + "/" + customDate.getFullYear();
+            return date;
+        }
+        else return null;
+    }
+
+    $(document).ready(function () {
+
+
+        $('.CustomDatepicker').datepicker({
+            autoclose: true,
+            format: 'dd/mm/yyyy'
+        });
+    });
+</script>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4eefa25c31f244b8ae0fafd7030d6253" Name="Diagram1">
+        <EntityTypeShape EntityType="OnLineShoppingModel.T_Sys_Item_Info" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnLineShoppingModel.T_Sys_Registration_Info" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnLineShoppingModel.T_Sys_Unit_Info" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnLineShoppingModel.T_Tran_Detail_Transaction" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnLineShoppingModel.T_Tran_Master_Transaction" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <AssociationConnector Association="OnLineShoppingModel.FK_T_Tran_Detail_Transaction_T_Sys_Item_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="OnLineShoppingModel.FK_T_Tran_Detail_Transaction_T_Sys_Registration_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="OnLineShoppingModel.FK_T_Tran_Detail_Transaction_T_Sys_Unit_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="OnLineShoppingModel.FK_T_Tran_Detail_Transaction_T_Tran_Master_Transaction" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

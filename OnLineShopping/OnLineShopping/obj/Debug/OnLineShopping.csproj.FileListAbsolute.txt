@@ -1,0 +1,235 @@
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\ApplicationInsights.config
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\OnLineShopping.dll.config
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\OnLineShopping.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\OnLineShopping.pdb
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\csc.exe
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\csc.exe.config
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\csc.rsp
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\csi.exe
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\csi.rsp
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\System.AppContext.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\vbc.exe
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\vbc.exe.config
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\vbc.rsp
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\VBCSCompiler.exe
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Antlr3.Runtime.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.AI.Web.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.ApplicationInsights.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Newtonsoft.Json.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Net.Http.Formatting.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.Helpers.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.Http.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.Http.WebHost.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.Mvc.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.Optimization.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.Razor.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.Deployment.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.Razor.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\WebGrease.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Newtonsoft.Json.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Net.Http.Formatting.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.Helpers.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.Http.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.Http.WebHost.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.Mvc.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.Optimization.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.Razor.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.Deployment.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.Razor.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Antlr3.Runtime.pdb
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.AI.Web.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.csprojAssemblyReference.cache
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.csproj.CoreCompileInputs.cache
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.csproj.CopyComplete
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.dll
+C:\Users\msislam\source\repos\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.pdb
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\ApplicationInsights.config
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\OnLineShopping.dll.config
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\OnLineShopping.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\OnLineShopping.pdb
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\csc.exe
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\csc.exe.config
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\csc.rsp
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\csi.exe
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\csi.rsp
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\System.AppContext.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\System.Collections.Immutable.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\System.IO.FileSystem.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\System.Reflection.Metadata.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\vbc.exe
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\vbc.exe.config
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\vbc.rsp
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\VBCSCompiler.exe
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\roslyn\VBCSCompiler.exe.config
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Antlr3.Runtime.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\EntityFramework.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.DependencyCollector.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.Web.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.WindowsServer.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.ApplicationInsights.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.Web.Infrastructure.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Newtonsoft.Json.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Net.Http.Formatting.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Helpers.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Http.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Http.WebHost.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Mvc.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Optimization.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Razor.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.Deployment.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.Razor.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\WebGrease.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\EntityFramework.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Newtonsoft.Json.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Net.Http.Formatting.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Helpers.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Http.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Http.WebHost.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Mvc.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Optimization.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Razor.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.Deployment.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.Razor.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Antlr3.Runtime.pdb
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.DependencyCollector.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.WindowsServer.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.Web.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.csproj.CoreCompileInputs.cache
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.csproj.CopyComplete
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.dll
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.pdb
+D:\Rayan\project\project\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.csprojAssemblyReference.cache
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\ApplicationInsights.config
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\OnLineShopping.dll.config
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\OnLineShopping.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\OnLineShopping.pdb
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\csc.exe
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\csc.exe.config
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\csc.rsp
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\csi.exe
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\csi.rsp
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\System.AppContext.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\System.Collections.Immutable.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\System.IO.FileSystem.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\System.Reflection.Metadata.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\vbc.exe
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\vbc.exe.config
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\vbc.rsp
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\VBCSCompiler.exe
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\roslyn\VBCSCompiler.exe.config
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Antlr3.Runtime.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\EntityFramework.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.DependencyCollector.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.Web.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.WindowsServer.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.ApplicationInsights.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.Web.Infrastructure.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Newtonsoft.Json.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Net.Http.Formatting.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Helpers.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Http.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Http.WebHost.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Mvc.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Optimization.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Razor.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.Deployment.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.Razor.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\WebGrease.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\EntityFramework.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Newtonsoft.Json.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Net.Http.Formatting.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Helpers.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Http.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Http.WebHost.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Mvc.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Optimization.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.Razor.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.Deployment.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Web.WebPages.Razor.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Antlr3.Runtime.pdb
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.DependencyCollector.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.WindowsServer.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.AI.Web.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.csprojAssemblyReference.cache
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.csproj.CoreCompileInputs.cache
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.csproj.CopyComplete
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.dll
+D:\Rayan\New folder\project\project\OnLineShopping\OnLineShopping\obj\Debug\OnLineShopping.pdb

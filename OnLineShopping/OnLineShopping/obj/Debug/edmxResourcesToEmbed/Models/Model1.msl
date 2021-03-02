@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OnLineShoppingModelStoreContainer" CdmEntityContainer="OnLineShoppingEntities">
+    <EntitySetMapping Name="T_Sys_Item_Info">
+      <EntityTypeMapping TypeName="OnLineShoppingModel.T_Sys_Item_Info">
+        <MappingFragment StoreEntitySet="T_Sys_Item_Info">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemModel" ColumnName="ItemModel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Sys_Registration_Info">
+      <EntityTypeMapping TypeName="OnLineShoppingModel.T_Sys_Registration_Info">
+        <MappingFragment StoreEntitySet="T_Sys_Registration_Info">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserCreationDate" ColumnName="UserCreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Sys_Unit_Info">
+      <EntityTypeMapping TypeName="OnLineShoppingModel.T_Sys_Unit_Info">
+        <MappingFragment StoreEntitySet="T_Sys_Unit_Info">
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Tran_Detail_Transaction">
+      <EntityTypeMapping TypeName="OnLineShoppingModel.T_Tran_Detail_Transaction">
+        <MappingFragment StoreEntitySet="T_Tran_Detail_Transaction">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Tran_Master_Transaction">
+      <EntityTypeMapping TypeName="OnLineShoppingModel.T_Tran_Master_Transaction">
+        <MappingFragment StoreEntitySet="T_Tran_Master_Transaction">
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="VoucherNo" ColumnName="VoucherNo" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,304 @@
+﻿@{
+                /**/
+
+                ViewBag.Title = "    NEW TRANSACTION ";
+                Layout = "~/Views/Shared/_PrivateLayout.cshtml";
+}
+<div style="border:double;border-color:steelblue"></div>
+<br />
+<div class="box col-sm-12" style="border:double">
+    <div class="container col-sm-12">
+        <br />
+        <input id="customerId" type="hidden" value="" />
+        <div class="form-group col-sm-4">
+            <label> Customer Name <span style="color:red;">*</span></label>
+            <input type="text" id="txtcustomer" name="txtcustomer" maxlength="50" class="form-control">
+            <label id="lblcustomer" style="color:red;font-size:11px;font-style:italic; "> </label>
+        </div>
+        <div class="form-group col-sm-4">
+            <label> Voucher No. <span style="color:red;">*</span></label>
+            <input type="text" id="txtvoucher" name="txtvoucher" maxlength="50" class="form-control">
+            <label id="lblvoucher" style="color:red;font-size:11px;font-style:italic; "> </label>
+        </div>
+        <div class="form-group col-sm-4">
+            <label> Transaction Date <span style="color:red;">*</span></label>
+            <input type="text" id="txtdate" name="txtdate" maxlength="50" class=" form-control CustomDatepicker">
+            <label id="lbldate" style="color:red;font-size:11px;font-style:italic; "> </label>
+        </div>
+    </div>
+
+    <div class="col-sm-12 ">
+
+        <table class="table table-striped table-bordered table-hover" id="tblItemTable">
+            <thead style="background-color:darkgrey;color:white">
+                <tr>
+                    <th width="25%" style="text-align:center">Item Name <span style="color:orangered">*</span></th>
+                    <th width="25%" style="text-align:center">Quantity<span style="color:orangered">*</span></thwidth="25%">
+                    <th width="25%" style="text-align:center">Unit<span style="color:orangered">*</span></th>
+                    <th width="25%" style="text-align:center">Unit Price<span style="color:orangered">*</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="new_line_details_0" class="new_line">
+                    <td>
+                        <select id="ddlItem" class="form-control" style="text-align:center"></select>
+                    </td>
+                    <td>
+                        <input type="text" id="txtQuantity" class="form-control" />
+                    </td>
+                    <td>
+                        <select id="ddlUnit" class="form-control" style="text-align:center"></select>
+                    </td>
+                    <td>
+                        <input type="text" id="txtUnitprice" class="form-control" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="button" class="additem col-sm-2 col-sm-offset-5" name="additem" id="additem" value="Add Item" />
+    </div>
+
+    <div class="col-sm-12">
+        <br />
+        <br />
+        <table class="table table-striped table-bordered table-hover" id="additemtable">
+            <thead style="background-color:darkgrey;color:white">
+                <tr>
+                    <th style="display:none">Item Id </th>
+                    <th width="19%" style="text-align:center">Item Name </th>
+                    <th width="19%" style="text-align:center">Quantity</th>
+                    <th width="19%" style="text-align:center">Unit</th>
+                    <th style="display:none">Unit Id</th>
+                    <th width="19%" style="text-align:center">Unit Price</th>
+                    <th width="19%" style="text-align:center">Total Price</th>
+                    <th width="5%" style="text-align:center">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableInputs"></tbody>
+        </table>
+        <input type="button" class="col-sm-1 col-sm-offset-5" id="saveTransaction" value="Save" />
+        <input type="button" id="deleteButton" class="deleteButton col-sm-1" value="Delete" />
+        <br />
+    </div>
+    <input id="hId" type="hidden" value="" />
+    <input id="userId" type="hidden" value="3" />
+
+</div>
+<script>
+    var RowOfTable;
+    var RowNum;
+
+    $(document).ready(function () {
+        $.ajax({
+            url: '/API/TransactionApi/GetAllItem',
+            dataType: "json",
+            async: false,
+            method: 'GET',
+            success: function (data) {
+                $('#ddlItem').html('');
+                $('#ddlItem').append('<option value="">--Select--</option>');
+                $(data).each(function (index, item) {
+                    $('#ddlItem').append('<option value="' + item.ItemId + '">' + item.ItemName + '</option>');
+                });
+            }
+        });
+        $.ajax({
+            url: '/API/TransactionApi/GetAllUnit',
+            dataType: "json",
+            async: false,
+            method: 'GET',
+            success: function (data) {
+                $('#ddlUnit').html('');
+                $('#ddlUnit').append('<option value="">--Select--</option>');
+                $(data).each(function (index, unit) {
+                    $('#ddlUnit').append('<option value="' + unit.UnitId + '">' + unit.UnitName + '</option>');
+                });
+            }
+        });
+    });
+    // Click event
+
+    $("#additem").click(function () {
+        var valid = false;
+        if ($.trim($("#ddlItem").val()) == "") {
+            valid = false;
+        }
+        else {
+            valid = true;
+        }
+        if ($.trim($("#txtQuantity").val()) == "") {
+            valid = false;
+
+        }
+        else {
+            valid = true;
+        }
+        if ($.trim($("#txtDate").val()) == "") {
+            valid = false;
+
+        }
+        else {
+            valid = true;
+        }
+        if ($.trim($("#ddlUnit").val()) == "") {
+            valid = false;
+        }
+        else {
+            valid = true;
+        }
+        if ($.trim($("#txtUnitprice").val()) == "") {
+            valid = false;
+        }
+        else {
+            valid = true;
+        }
+        if (valid == true) {
+            AddItemFunction();
+        }
+    });
+    $("#saveTransaction").click(function () {
+        var validation = false;
+        if ($.trim($("#txtcustomer").val()) == "") {
+            validation = false;
+            $("#lblcustomer").html("Provide Customer Name");
+        }
+        else {
+            validation = true;
+            $("#lblcustomer").html("");
+        }
+        if ($.trim($("#txtvoucher").val()) == "") {
+            validation = false;
+            $("#lblvoucher").html("Provide Voucher No");
+        }
+        else {
+            validation = true;
+            $("#lblvoucher").html("");
+        }
+        if ($.trim($("#txtdate").val()) == "") {
+            validation = false;
+            $("#lbldate").html("Provide Transaction Date");
+        }
+        else {
+            validation = true;
+            $("#lbldate").html("");
+        }
+        if (validation == true) {
+            SaveDetails();
+            ClearCustomerInfo();
+
+        }
+    });
+
+    $(document).on("click", ".deleteButton", function () {
+        var value = 0;
+        $("#additemtable > tbody >tr").each(function () {
+            var row = $(this);
+            if (row.find('input[type="checkbox"]').is(':checked')) {
+                row.remove();
+                value = 1;
+            }
+        });
+        if (value == 0) {
+            alert("Select Rows")
+        }
+    })
+    // Functions
+    function AddItemFunction() {
+        var ttable = $('#additemtable tbody');
+
+        ttable.append('<tr>'
+            + '<td style="display:none">' + $("#ddlItem option:selected").val() + '</td>'
+            + '<td style="text-align:center">' + $("#ddlItem option:selected").text() + '</td>'
+            + '<td style="text-align:center">' + $("#txtQuantity").val() + '</td>'
+            + '<td style="text-align:center">' + $("#ddlUnit option:selected").text() + '</td>'
+            + '<td style="display:none">' + $("#ddlUnit option:selected").val() + '</td>'
+            + '<td style="text-align:center">' + $("#txtUnitprice").val() + '</td>'
+            + '<td style="text-align:center">' + $("#txtUnitprice").val() * $("#txtQuantity").val() + '</td>'
+            + '<td style="text-align:center">' + '<input type="checkbox" id="checkbox"/>' + '</td>'
+            + '</tr>');
+        Clear();
+    };
+    function Clear() {
+        $("#ddlItem").val("");
+        $("#txtQuantity").val("");
+        $("#ddlUnit").val("");
+        $("#txtUnitprice").val("");
+    };
+    function ClearCustomerInfo() {
+        $("#txtcustomer").val("");
+        $("#txtvoucher").val("");
+        $("#txtdate").val("");
+
+    };
+    function ClearTable() {
+        $("#additemtable > tbody").each(function () {
+               $(this).find("tr").remove();
+        });
+    };
+
+    function SaveDetails() {
+        var ItemDetailList = new Array();
+        var grossAmount = 0;
+        $("#additemtable > tbody > tr").each(function () {
+            var column = $(this).find("td");
+            var itemDetails = {
+                Id: $("#hId").val(),
+                ItemId: parseInt($(column[0]).html()),
+                UnitId: parseInt($(column[4]).html()),
+                Quantity: parseInt($(column[2]).html()),
+                UnitPrice: parseInt($(column[5]).html()),
+                TotalPrice: parseFloat($(column[6]).html()),
+                UserId: $("#userId").val(),
+                // TransactionId: $("hId").val(),
+            }
+            grossAmount += itemDetails.TotalPrice;
+            ItemDetailList.push(itemDetails);
+        });
+        var TransactionDetails;
+        TransactionDetails = new Object();
+
+        // TransactionDetails.TransactionId = $('#hId').val();
+        TransactionDetails.CustomerName = $('#txtcustomer').val();
+        TransactionDetails.VoucherNo = $('#txtvoucher').val();
+        TransactionDetails.TransactionDate = ConvertDateFormat($('#txtdate').val());
+        TransactionDetails.GrossAmount = parseFloat(grossAmount).toFixed(3);
+        TransactionDetails.UserId = parseInt($("#userId").val());
+        TransactionDetails.ItemDetailList = ItemDetailList;
+        $.post('/API/SaveDetailsApi/InsertMasterTranInfo', TransactionDetails).done(function (data) {
+            alert("saved successfully");
+            ClearTable();
+        });
+    };
+    // dd/mm/yyyy to  mm/dd/yyyy for save
+    function ConvertDateFormat(inputdate) {
+        // alert(inputdate);
+        if (isNaN(inputdate)) {
+            var array = inputdate.split("/");
+            var date = array[1] + "/" + array[0] + "/" + array[2];
+            // alert(date);
+            return date;  // dd/mm/yyyy to  mm/dd/yyyy
+        }
+        else return null;
+    }
+
+    // yyyy-mm-dd to  dd/mm/yyyy for display
+    function ConvertStringFormatToDate(inputdate) {
+        if (isNaN(inputdate)) {
+            var customDate = new Date(inputdate);
+            var date = customDate.getDate() + "/" + (customDate.getMonth() + 1) + "/" + customDate.getFullYear();
+            return date;
+        }
+        else return null;
+    }
+
+    $(document).ready(function () {
+
+
+        $('.CustomDatepicker').datepicker({
+            autoclose: true,
+            format: 'dd/mm/yyyy'
+        });
+    });
+
+</script>
+

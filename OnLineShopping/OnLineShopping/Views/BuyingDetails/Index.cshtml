@@ -1,0 +1,73 @@
+﻿@using OnLineShopping.ViewModel
+@model ItemViewModel
+@{
+    ViewBag.Title = "Buying Details";
+    Layout = "~/Views/Shared/_PrivateLayout.cshtml";
+}
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+
+<div class="box" style="border:double">
+    <div class="row col-sm-2 ">
+        <br />
+        <br />
+        <br />
+        <input id="customerId" type="hidden" value="" />
+        <div class="form-group">
+            <label> Customer Name <span style="color:red;">*</span></label>
+            <input type="text" id="txtcustomer" name="txtcustomer" maxlength="50" class="form-control">
+            <label id="lblcustomer" style="color:red;font-size:11px;font-style:italic; "> </label>
+        </div>
+        <div class="form-group">
+            <label> Voucher No. <span style="color:red;">*</span></label>
+            <input type="text" id="txtvoucher" name="txtvoucher" maxlength="50" class="form-control">
+            <label id="lblvoucher" style="color:red;font-size:11px;font-style:italic; "> </label>
+        </div>
+        <div class="form-group">
+            <label> Transaction Date <span style="color:red;">*</span></label>
+            <input type="date" id="txtdate" name="txtdate" maxlength="50" class="form-control">
+            <label id="lbldate" style="color:red;font-size:11px;font-style:italic; "> </label>
+        </div>
+        <input type="button" class="additem" name="additem" id="additem" value="Add Item" />
+        <br />
+        <br />
+        <br />
+        <div class="boxed" style="background-color:whitesmoke;height:100px;width:1260px; border:outset">
+            <br />
+            <inline>
+                <div class="row col-sm-3 col-sm-offset-1">
+                    <b>Item</b>
+                </div>
+            </inline>
+            <inline>
+                <div class="row col-sm-3 ">
+                    <b>Quantity</b>
+                </div>
+            </inline>
+            <inline>
+                <div class="row col-sm-3 ">
+                    <b>Unit</b>
+                </div>
+            </inline>
+            <inline>
+                <div class="row col-sm-3 ">
+                    <b>Unit Price</b>
+                </div>
+            </inline>
+            <br />
+            <inline>
+                <div class="row col-sm-3 col-sm-offset-1">
+                    @Html.DropDownList("T_Sys_Item_Info","Select Item");
+                </div>
+            </inline>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+        
+
+

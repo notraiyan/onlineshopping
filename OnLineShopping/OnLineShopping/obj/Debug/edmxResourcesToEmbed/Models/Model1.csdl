@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OnLineShoppingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="T_Sys_Item_Info">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="Int32" Nullable="false" />
+    <Property Name="ItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ItemModel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T_Tran_Detail_Transaction" Relationship="Self.FK_T_Tran_Detail_Transaction_T_Sys_Item_Info" FromRole="T_Sys_Item_Info" ToRole="T_Tran_Detail_Transaction" />
+  </EntityType>
+  <EntityType Name="T_Sys_Registration_Info">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserCreationDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="T_Tran_Detail_Transaction" Relationship="Self.FK_T_Tran_Detail_Transaction_T_Sys_Registration_Info" FromRole="T_Sys_Registration_Info" ToRole="T_Tran_Detail_Transaction" />
+  </EntityType>
+  <EntityType Name="T_Sys_Unit_Info">
+    <Key>
+      <PropertyRef Name="UnitId" />
+    </Key>
+    <Property Name="UnitId" Type="Int32" Nullable="false" />
+    <Property Name="UnitName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T_Tran_Detail_Transaction" Relationship="Self.FK_T_Tran_Detail_Transaction_T_Sys_Unit_Info" FromRole="T_Sys_Unit_Info" ToRole="T_Tran_Detail_Transaction" />
+  </EntityType>
+  <EntityType Name="T_Tran_Detail_Transaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ItemId" Type="Int32" Nullable="false" />
+    <Property Name="UnitId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="TransactionId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="T_Sys_Item_Info" Relationship="Self.FK_T_Tran_Detail_Transaction_T_Sys_Item_Info" FromRole="T_Tran_Detail_Transaction" ToRole="T_Sys_Item_Info" />
+    <NavigationProperty Name="T_Sys_Registration_Info" Relationship="Self.FK_T_Tran_Detail_Transaction_T_Sys_Registration_Info" FromRole="T_Tran_Detail_Transaction" ToRole="T_Sys_Registration_Info" />
+    <NavigationProperty Name="T_Sys_Unit_Info" Relationship="Self.FK_T_Tran_Detail_Transaction_T_Sys_Unit_Info" FromRole="T_Tran_Detail_Transaction" ToRole="T_Sys_Unit_Info" />
+    <NavigationProperty Name="T_Tran_Master_Transaction" Relationship="Self.FK_T_Tran_Detail_Transaction_T_Tran_Master_Transaction" FromRole="T_Tran_Detail_Transaction" ToRole="T_Tran_Master_Transaction" />
+  </EntityType>
+  <EntityType Name="T_Tran_Master_Transaction">
+    <Key>
+      <PropertyRef Name="TransactionId" />
+    </Key>
+    <Property Name="TransactionId" Type="Int32" Nullable="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VoucherNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TransactionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GrossAmount" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="T_Tran_Detail_Transaction" Relationship="Self.FK_T_Tran_Detail_Transaction_T_Tran_Master_Transaction" FromRole="T_Tran_Master_Transaction" ToRole="T_Tran_Detail_Transaction" />
+  </EntityType>
+  <Association Name="FK_T_Tran_Detail_Transaction_T_Sys_Item_Info">
+    <End Role="T_Sys_Item_Info" Type="Self.T_Sys_Item_Info" Multiplicity="1" />
+    <End Role="T_Tran_Detail_Transaction" Type="Self.T_Tran_Detail_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Sys_Item_Info">
+        <PropertyRef Name="ItemId" />
+      </Principal>
+      <Dependent Role="T_Tran_Detail_Transaction">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Tran_Detail_Transaction_T_Sys_Registration_Info">
+    <End Role="T_Sys_Registration_Info" Type="Self.T_Sys_Registration_Info" Multiplicity="1" />
+    <End Role="T_Tran_Detail_Transaction" Type="Self.T_Tran_Detail_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Sys_Registration_Info">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_Tran_Detail_Transaction">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Tran_Detail_Transaction_T_Sys_Unit_Info">
+    <End Role="T_Sys_Unit_Info" Type="Self.T_Sys_Unit_Info" Multiplicity="1" />
+    <End Role="T_Tran_Detail_Transaction" Type="Self.T_Tran_Detail_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Sys_Unit_Info">
+        <PropertyRef Name="UnitId" />
+      </Principal>
+      <Dependent Role="T_Tran_Detail_Transaction">
+        <PropertyRef Name="UnitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Tran_Detail_Transaction_T_Tran_Master_Transaction">
+    <End Role="T_Tran_Master_Transaction" Type="Self.T_Tran_Master_Transaction" Multiplicity="1" />
+    <End Role="T_Tran_Detail_Transaction" Type="Self.T_Tran_Detail_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Tran_Master_Transaction">
+        <PropertyRef Name="TransactionId" />
+      </Principal>
+      <Dependent Role="T_Tran_Detail_Transaction">
+        <PropertyRef Name="TransactionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OnLineShoppingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_Sys_Item_Info" EntityType="Self.T_Sys_Item_Info" />
+    <EntitySet Name="T_Sys_Registration_Info" EntityType="Self.T_Sys_Registration_Info" />
+    <EntitySet Name="T_Sys_Unit_Info" EntityType="Self.T_Sys_Unit_Info" />
+    <EntitySet Name="T_Tran_Detail_Transaction" EntityType="Self.T_Tran_Detail_Transaction" />
+    <EntitySet Name="T_Tran_Master_Transaction" EntityType="Self.T_Tran_Master_Transaction" />
+    <AssociationSet Name="FK_T_Tran_Detail_Transaction_T_Sys_Item_Info" Association="Self.FK_T_Tran_Detail_Transaction_T_Sys_Item_Info">
+      <End Role="T_Sys_Item_Info" EntitySet="T_Sys_Item_Info" />
+      <End Role="T_Tran_Detail_Transaction" EntitySet="T_Tran_Detail_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Tran_Detail_Transaction_T_Sys_Registration_Info" Association="Self.FK_T_Tran_Detail_Transaction_T_Sys_Registration_Info">
+      <End Role="T_Sys_Registration_Info" EntitySet="T_Sys_Registration_Info" />
+      <End Role="T_Tran_Detail_Transaction" EntitySet="T_Tran_Detail_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Tran_Detail_Transaction_T_Sys_Unit_Info" Association="Self.FK_T_Tran_Detail_Transaction_T_Sys_Unit_Info">
+      <End Role="T_Sys_Unit_Info" EntitySet="T_Sys_Unit_Info" />
+      <End Role="T_Tran_Detail_Transaction" EntitySet="T_Tran_Detail_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Tran_Detail_Transaction_T_Tran_Master_Transaction" Association="Self.FK_T_Tran_Detail_Transaction_T_Tran_Master_Transaction">
+      <End Role="T_Tran_Master_Transaction" EntitySet="T_Tran_Master_Transaction" />
+      <End Role="T_Tran_Detail_Transaction" EntitySet="T_Tran_Detail_Transaction" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

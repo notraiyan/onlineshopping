@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "    Login Page ";
+    Layout = "~/Views/Shared/newShared.cshtml";
+}
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<div style="border:double;border-color:steelblue"></div>
+<div>
+        <br />
+        <br />
+        <br />
+        <div class="container col-md-4 col-sm-offset-3">
+            <br>
+            <div class="md-input">
+                <i class="fa fa-user" style="color:steelblue"></i>
+                <input class="form-control" name="loginId" id="loginId" required="" type="text" placeholder="User ID:">
+                <span class="highlight" id="luser" style="color:red;font-size:11px;font-style:italic; "></span>
+            </div>
+            <div class="md-input">
+                <i class="fa fa-key" style="color:steelblue"></i>
+                <input class="form-control" name="password" id="password" required="" type="password" placeholder="Password:">
+                <span class="highlight" id="lpass" style="color:red;font-size:11px;font-style:italic; "></span>
+            </div>
+            <div class="form-group col-sm-offset-4">
+                <input type="button" class="login" name="login" id="login" value="Login" />
+                <input type="button" class="signup" name="signup" id="signup" value="Sign Up" onclick="window.location= '@Url.Action("Index", "Registration")';" />
+            </div>
+        </div>
+</div>
+
+
+<script>
+    var inputId = document.getElementById("loginId");
+    var inputPass = document.getElementById("password");
+    inputId.addEventListener("keyup", function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            document.getElementById("login").click();
+        }
+    });
+    inputPass.addEventListener("keyup", function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            document.getElementById("login").click();
+        }
+    });
+    $(document).ready(function () {
+        Clear();
+    });
+
+   $("#login").click(function () {
+        validation = false;
+
+    if ($.trim($("#loginId").val()) == "") {
+        $('#luser').html("User name required!")
+        validation = false;
+    }
+    else {
+        $('#luser').html("")
+        validation = true;
+    }
+    if ($.trim($("#password").val()) == "") {
+        $('#lpass').html("Password required!")
+        validation = false;
+    }
+    else {
+        $('#lpass').html("")
+        validation = true;
+    }
+
+    if (validation == true) {
+        login();
+    }
+    });
+    function Clear() {
+        $("input[type=text],textarea").val("");
+        $("input[type=password],textarea").val("");
+
+    };
+
+function login() {
+    var login;
+    login = new Object();
+    login.UserName = $('#loginId').val();
+    login.Password = $('#password').val();
+
+    $.post('/API/LoginApi/LoginInfo', login).done(function (data) {
+        if (data == 1) {
+            alert("Wrong Username/Password.");
+            Clear();
+        }
+        if (data == 2) {
+            window.location.href = "@Url.Action("Index", "Transaction")";
+        }
+    });
+
+}
+</script>
